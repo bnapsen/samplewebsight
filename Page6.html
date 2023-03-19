@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forest Adventure Game - Page 6</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			background-color: #b7d7e8;
+			margin: 0;
+			padding: 1rem;
+		}
+
+		h1, h2 {
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		h1 {
+			font-size: 3rem;
+			color: #2d5a5a;
+		}
+
+		h2 {
+			font-size: 2rem;
+			color: #4b4b4b;
+		}
+
+		p {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 0.5rem 1rem;
+			background-color: #2d5a5a;
+			color: white;
+			text-decoration: none;
+			border-radius: 0.25rem;
+		}
+
+		.button:hover {
+			background-color: #4b8e8e;
+		}
+	</style>
+</head>
+<body>
+	<h1>Forest Adventure Game - Page 6</h1>
+
+	<p>You chose the river path. As you follow the path along the river, you suddenly hear a loud roar. You turn around and see a huge bear blocking your path. What will you do?</p>
+
+	<button class="button" onclick="fightBear()">Fight the Bear</button>
+	<button class="button" onclick="runAway()">Run Away</button>
+
+	<script>
+		function fightBear() {
+			window.location.href = "page7.html";
+		}
+
+		function runAway() {
+			window.location.href = "page8.html";
+		}
+	</script>
+</body>
+</html>
