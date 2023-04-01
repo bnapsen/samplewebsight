@@ -12,21 +12,20 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="galery.html">Gallery</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h2>Contact Us</h2>
-      <form>
-        <form action="https://formsubmit.co/bens.w@hotmail.com" method="POST">
+      <form action="https://formsubmit.co/bens.w@hotmail.com" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" required>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
         <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message" required></textarea>
         <button type="submit">Send</button>
       </form>
     </main>
