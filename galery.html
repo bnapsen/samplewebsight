@@ -3,83 +3,41 @@
   <head>
     <meta charset="UTF-8">
     <title>Wagner's Paintings - Gallery</title>
+    <link rel="stylesheet" href="style.css">
     <style>
       body {
-        background-color: blue;
-        color: white;
+        background-color: #F0F8FF;
       }
       
-      header {
-        text-align: center;
+      main {
+        max-width: 800px;
+        margin: 0 auto;
       }
       
       .card {
-        background-color: white;
-        color: black;
-        padding: 20px;
-        margin: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: inline-block;
-      }
-      
-      img {
-        max-width: 100%;
-        border-radius: 5px;
-        margin-bottom: 10px;
-      }
-      
-      h2 {
         text-align: center;
-        font-size: 2rem;
+        margin-bottom: 30px;
       }
       
-      h3 {
-        font-size: 1.5rem;
-      }
-      
-      p {
-        font-size: 1rem;
-      }
-      
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-      }
-      
-      nav li {
-        margin: 0 10px;
-      }
-      
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.2rem;
-      }
-      
-      nav a:hover {
-        text-decoration: underline;
+      .card img {
+        max-width: 100%;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Wagner's Paintings</h1>
+    <header style="background-color:#2E64FE;">
+      <h1 style="color:#F0F8FF; text-align:center;">Wagner's Paintings</h1>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="galery.html">Gallery</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Gallery</h2>
+      <h2 style="text-align:center;">Gallery</h2>
       <div class="card">
         <img src="painting1.jpg" alt="Painting 1">
         <h3>Painting 1</h3>
@@ -98,5 +56,6 @@
     </main>
   </body>
 </html>
+
 
 
