@@ -3,10 +3,52 @@
   <head>
     <meta charset="UTF-8">
     <title>Wagner's Painting - Gallery</title>
-    <link rel="stylesheet" href="style.css">
     <style>
       body {
-        background-color: #c3e3f4;
+        background-color: #e1f1ff;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #2E64FE;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      h1 {
+        color: #F0F8FF;
+        margin: 0;
+        font-size: 32px;
+      }
+      
+      nav {
+        margin-top: 20px;
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      
+      li {
+        margin-right: 20px;
+      }
+      
+      a {
+        color: #F0F8FF;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      a:hover {
+        color: #c3e3f4;
       }
       
       main {
@@ -15,21 +57,62 @@
         background-color: #f5f5f5;
         padding: 20px;
         border-radius: 5px;
+        text-align: center;
+      }
+      
+      h2 {
+        margin-top: 0;
+        font-size: 24px;
       }
       
       .card {
-        text-align: center;
         margin-bottom: 30px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fff;
       }
       
       .card img {
         max-width: 100%;
+        border-radius: 5px;
+      }
+      
+      .card h3 {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+      
+      .card p {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      .btn {
+        background-color: #2E64FE;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn:hover {
+        background-color: #1C4587;
       }
     </style>
   </head>
   <body>
-    <header style="background-color:#2E64FE;">
-      <h1 style="color:#F0F8FF; text-align:center;">Wagner's Paintings</h1>
+    <header>
+      <h1>Wagner's Paintings</h1>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -40,25 +123,13 @@
       </nav>
     </header>
     <main>
-      <h2 style="text-align:center;">Gallery</h2>
+      <h2>Gallery</h2>
       <div class="card">
         <img src="painting1.jpg" alt="Painting 1">
         <h3>Painting 1</h3>
         <p>A description of painting 1.</p>
-      </div>
-      <div class="card">
-        <img src="painting2.jpg" alt="Painting 2">
-        <h3>Painting 2</h3>
-        <p>A description of painting 2.</p>
-      </div>
-      <div class="card">
-        <img src="painting3.jpg" alt="Painting 3">
-        <h3>Painting 3</h3>
-        <p>A description of painting 3.</p>
-      </div>
-    </main>
-  </body>
-</html>
+       
+
 
 
 
