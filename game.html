@@ -71,12 +71,16 @@
     previewCtx.fillRect(0, 0, previewCanvas.width, previewCanvas.height);
 
     houseColorInput.addEventListener('input', () => {
-      const color = hexToRgb(houseColorInput.value);
-      previewCtx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
-      previewCtx.fillRect(0, 0, previewCanvas.width, previewCanvas.height);
-      imageData = previewCtx.getImageData(0, 0, previewCanvas.width, previewCanvas.height);
-      colorCode.innerText = houseColorInput.value;
-    });
+  const color = hexToRgb(houseColorInput.value);
+  previewCtx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
+  previewCtx.fillRect(0, 0, previewCanvas.width, previewCanvas.height);
+  imageData = previewCtx.getImageData(0, 0, previewCanvas.width, previewCanvas.height);
+  colorCode.innerText = `${houseColorInput.value} (${color.r}, ${color.g}, ${color.b})`;
+  previewCtx.font = '24px Arial';
+  previewCtx.fillStyle = '#000';
+  previewCtx.fillText(`rgb(${color.r}, ${color.g}, ${color.b})`, 20, 80);
+});
+
 
     saveBtn.addEventListener('click', () => {
       if (!imageData) return;
@@ -99,4 +103,3 @@
   </script>
 </body>
 </html>
-
