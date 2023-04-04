@@ -5,59 +5,104 @@
 	<title>Virtual House Painting Tool</title>
 	<link rel="stylesheet" href="style.css">
 	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f5f5f5;
-			margin: 0;
-			padding: 0;
-		}
-		header {
-			background-color: #65a659;
-			color: #fff;
-			padding: 10px;
-			text-align: center;
-		}
-		main {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		section {
-			margin-bottom: 20px;
-		}
-		canvas {
-			max-width: 100%;
-			height: auto;
-		}
-    #colorCode {
-      display: inline-block;
-      margin-left: 20px;
-      font-size: 18px;
-    }
+		      body {
+        background-color: #004d40;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+      }
+      header {
+        background-color: #009688;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+      }
+      nav li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      nav li:last-child {
+        margin-right: 0;
+      }
+      nav a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      nav a:hover {
+        background-color: #fff;
+        color: #009688;
+      }
+      main {
+        padding: 20px;
+        text-align: justify;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+img {
+  position: absolute;
+  top: 1;
+  right: 25px;
+  max-height: 75%; /* Set the maximum height of the image to 75% of the container height */
+  max-width: 75%; /* Set the maximum width of the image to 75% of the container width */
+  object-fit: contain;
+}
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Virtual House Painting Tool</h1>
+				   <h1>Wagner's Painting Virtual House Painting Tool</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 	</header>
 	<main>
 		<section>
+			<h2>Upload a Picture of Your House</h2>
+			<input type="file" id="houseImage" accept="image/*">
+			<div id="houseImagePreview"></div>
+		</section
+		<section>
 			<h2>Select a New Color for Your House</h2>
 			<input type="color" id="houseColor">
-      <span id="colorCode"></span>
+			<span id="colorCode"></span>
 		</section>
 		<section>
 			<h2>Preview the New House Color</h2>
 			<canvas id="previewCanvas"></canvas>
 		</section>
-        <section>
-			<h2>Save Your New House Color</h2>
+		>
+		<section>
+			<h2>Save Your New House Color and Image</h2>
 			<button id="saveBtn">Save</button>
 		</section>
 	</main>
 	<script src="script.js"></script>
-  <script>
-    const houseColorInput = document.getElementById('houseColor');
+	<script>
+	    const houseColorInput = document.getElementById('houseColor');
     const previewCanvas = document.getElementById('previewCanvas');
     const previewCtx = previewCanvas.getContext('2d');
     const saveBtn = document.getElementById('saveBtn');
@@ -100,6 +145,24 @@
       const b = parseInt(hex.slice(5, 7), 16);
       return { r, g, b };
     }
-  </script>
+		const houseImageInput = document.getElementById('houseImage');
+		const houseImagePreview = document.getElementById('houseImagePreview');
+
+		houseImageInput.addEventListener('change', () => {
+			const file = houseImageInput.files[0];
+			if (file) {
+				const reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = () => {
+					const img = document.createElement('img');
+					img.src = reader.result;
+					houseImagePreview.innerHTML = '';
+					houseImagePreview.appendChild(img);	
+  				document.getElementById('img').width = '300';
+							};
+			}
+		});
+	</script>
 </body>
 </html>
+
