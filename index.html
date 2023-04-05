@@ -36,23 +36,29 @@
       nav a:hover {
         color: #666;
       }
-      main {
+      .banner {
+        background-image: url(gf3.jpg);
+        background-size: cover;
+        height: 500px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
-      .card {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        box-shadow: 0 0 5px #ddd;
-        margin: 10px;
-        padding: 20px;
+      .banner h2 {
+        color: white;
+        font-size: 48px;
         text-align: center;
-        width: 300px;
       }
-      .card img {
-        max-width: 100%;
+      .banner p {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+      }
+      .banner a {
+        color: white;
+        font-size: 24px;
+        text-align: center;
       }
       footer {
         background-color: #333;
@@ -72,30 +78,12 @@
       <a href="gallery.html">Gallery</a>
       <a href="contactus.html">Contact</a>
     </nav>
-    <main>
-      <div class="card">
-        <img src="cabnetpainting.jpg" alt="Painting 1">
-        <h2>Painting 1</h2>
-        <p>Description of painting 1.</p>
-      </div>
-      <div class="card">
-        <img src="before.jpg" alt="Painting 2">
-        <h2>Painting 2</h2>
-        <p>Description of painting 2.</p>
-      </div>
-      <div class="card">
-        <img src="during.jpg" alt="Painting 3">
-        <h2>Painting 3</h2>
-        <p>Description of painting 3.</p>
-      </div>
-      <div class="card">
-        <img src="afterafter.jpg" alt="Painting 4">
-        <h2>Painting 4</h2>
-        <p>Description of painting 4.</p>
-      </div>
-    </main>
+    <div class="banner">
+      <h2>Welcome to Wagner's Painting</h2>
+      <p>Where you can bring your imagination to life.</p>
+      <a href="contactus.html">Contact Us</a>
+    </div>
     <footer>
-      <a href="https://www.roddapaint.com/">Rodda Paint</a>
       <p>&copy; 2023 Wagner's Paintings. All rights reserved.</p>
     </footer>
   </body>
