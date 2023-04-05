@@ -1,101 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Virtual House Painting Tool</title>
-	<link rel="stylesheet" href="style.css">
-        <a href="https://www.roddapaint.com/" target="_blank" style="font-size: 20px; font-weight: bold; color:          #0099cc; text-decoration: none;">Visit Rodda Paint</a>
-	<a href="https://gordonfinchhomes.com/" target="_blank" style="font-size: 24px; text-decoration: none; color: #0072c6; font-weight: bold; border-         bottom: 2px solid #0072c6;">Visit Gordon Finch Homes</a>
-	<style>
-		      body {
-        background-color: #004d40;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #fff;
+    <title>Wagner's Painting</title>
+    <style>
+      /* Add your custom styles here */
+      body {
+        background-color:#84acd7;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
       }
-      header {
-        background-color: #009688;
+       header {
+       background-image: url(gfhomes.jpg);
+       background-size: cover;
+        color: #fff;
         padding: 20px;
         text-align: center;
       }
       h1 {
-        margin: 0;
         font-size: 36px;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      nav ul {
         margin: 0;
-        padding: 0;
-        list-style: none;
+      }
+      nav {
+        background-color: #84acd7;
+        padding: 3px;
         text-align: center;
+      }
+      nav a {
+        color: #333;
+        font-size: 18px;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      nav a:hover {
+        color: #666;
       }
       nav li {
         display: inline-block;
         margin-right: 20px;
       }
-      nav li:last-child {
-        margin-right: 0;
-      }
-      nav a {
-        display: block;
-        padding: 10px;
-        color: #fff;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-      nav a:hover {
-        background-color: #fff;
-        color: #009688;
-      }
-
       main {
         padding: 20px;
         text-align: justify;
       }
       h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 20px;
+        color: white;
+        font-size: 20px;
+        text-align: left;
       }
-      p {
-        margin-bottom: 20px;
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
       }
-  #saveBtn {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #009688;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-0000000000}
-
-#saveBtn:hover {
-  background-color: #fff;
-  color: #009688;
-}
-img {
-  position: absolute;
-  top: 1;
-  right: 25px;
-  max-height: 75%; /* Set the maximum height of the image to 75% of the container height */
-  max-width: 75%; /* Set the maximum width of the image to 75% of the container width */
-  object-fit: contain;
-}
-	</style>
-</head>
+        #saveBtn {
+ 	font-size: 24px;
+  	font-weight: bold;
+ 	padding: 10px 20px;
+  	border: none;
+  	border-radius: 5px;
+  	background-color: #009688;
+  	color: #fff;
+  	cursor: pointer;
+  	transition: all 0.3s ease;
+       }
+      #saveBtn:hover {
+      background-color: #fff;
+      color: #009688;
+      }
+      img {
+  	position: absolute;
+  	top: 1;
+  	right: 25px;
+  	max-height: 75%; /* Set the maximum height of the image to 75% of the container height */
+  	max-width: 75%; /* Set the maximum width of the image to 75% of the container width */
+  	object-fit: contain;
+       }
+    </style>
+  </head>
 <body>
 	<header>
 				   <h1>Wagner's Painting Virtual House Painting Tool</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contactus.html">Contact</a></li>
-        </ul>
+<nav>
+       	   <ul>
+   	       <li><a href="index.html">Home</a></li>
+  	       <li><a href="about.html">About</a></li>
+   	       <li><a href="gallery.html">Gallery</a></li>
+  	       <li><a href="contactus.html">Contact</a></li>
+   	   </ul>
       </nav>
 	</header>
 	<main>
@@ -113,11 +107,13 @@ img {
 			<h2>Preview the New House Color</h2>
 			<canvas id="previewCanvas"></canvas>
 		</section>
-		>
 		<section>
 			<h2>Save Your New House Color and Image</h2>
 			<button id="saveBtn">Save</button>
 		</section>
+		<section>       
+<a href="https://www.roddapaint.com/" target="_blank" style="font-size: 20px; font-weight: bold; color: #0099cc; text-decoration: none;">Visit Rodda Paint</a>
+</section>
 	</main>
 	<script src="script.js"></script>
 	<script>
