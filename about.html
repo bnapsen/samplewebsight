@@ -5,9 +5,11 @@
     <title>Wagner's Painting - About</title>
     <style>
       body {
-        background-color: #84acd7;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #fff;
+         background-color:#84acd7;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
       }
        header {
        background-image: url(gfhomes.jpg);
@@ -20,7 +22,6 @@
         margin: 0;
         font-size: 36px;
         font-weight: bold;
-        text-transform: uppercase;
       }
       nav ul {
         margin: 0;
@@ -43,8 +44,7 @@
         transition: all 0.3s ease;
       }
       nav a:hover {
-        background-color: #fff;
-        color: #009688;
+        color: #666;
       }
       main {
         padding: 20px;
@@ -57,7 +57,29 @@
       }
       p {
         margin-bottom: 20px;
+        font-size: 13px;
       }
+ .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .text {
+  	background-color: #b5cff6;
+ 	border: 1px solid #ccc;
+padding: 20px;
+  	width: 55%;
+  	box-sizing: border-box;
+  	float: left;
+  }
+    .image {
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 45%;
+  }
+    img {
+    max-width: 100%;
+    height: auto;
+  }
     </style>
   </head>
   <body>
@@ -73,12 +95,18 @@
       </nav>
     </header>
     <main>
+<div class="container">
+  <div class="text">
       <h2>About Wagner's Painting</h2>
-      <p>Welcome to Wagner's Painting, your go-to residential and commercial painting contractor in Spokane Valley. Our team of highly skilled professionals is committed to providing top-notch painting services that transform your property's appearance.</p>
-      <p>With years of experience in the painting industry, we take pride in our ability to deliver exceptional results that exceed our clients' expectations. Whether you need a fresh coat of paint for your home, office, or commercial building, we've got you covered.</p>
-      <p>At Wagner's Painting, we use only the highest quality paints and materials to ensure a flawless finish that lasts. Our team is dedicated to delivering personalized service to every client, and we work closely with you to understand your unique needs and preferences.</p>
-      <p>We offer a wide range of painting services, including interior and exterior painting, cabinet refinishing, drywall repair, and more. No job is too big or small for us, and we're always up for a new challenge.</p>
-      <p>When you choose Wagner's Painting, you can rest assured that you're working with a reputable, reliable contractor that puts your satisfaction first. Contact us today to learn more about our services and schedule a free consultation. We look forward to working with you!</p>
-    </main>
+      <p>Welcome to Wagner's Painting, your go-to residential and commercial painting contractor in Spokane Valley. Our team of highly skilled professionals is committed to providing top-notch painting services that transform your property's appearance. With years of experience in the painting industry, we take pride in our ability to deliver exceptional results that exceed our clients' expectations. Whether you need a fresh coat of paint for your home, office, or commercial building, we've got you covered.</p>
+  <p> At Wagner's Painting, we use only the highest quality paints and materials to ensure a flawless finish that lasts. Our team is dedicated to delivering personalized service to every client, and we work closely with you to understand your unique needs and preferences. We offer a wide range of painting services, including interior and exterior painting, cabinet refinishing, drywall repair, and more. No job is too big or small for us, and we're always up for a new challenge.</p>
+   <p>When you choose Wagner's Painting, you can rest assured that you're working with a reputable, reliable contractor that puts your satisfaction first. Contact us today to learn more about our services and schedule a free consultation. We look forward to working with you!</p>
+  </div>
+  
+  <div class="image">
+    <img src="gfhomes.jpg" alt="About Wagner’s Painting">
+  </div>
+</div>
+
   </body>
 </html>
