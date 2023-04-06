@@ -5,8 +5,7 @@
     <style>
       /* Add your custom styles here */
       body {
-        background-color:#004d40;
-        color: blue;
+        background-color:#84acd7;
         font-family: Arial, sans-serif;
         line-height: 1.5;
         margin: 0;
@@ -18,34 +17,49 @@
        color: #fff;
        padding: 20px;
        text-align: center;
+       position: relative;
+       z-index: 1;
+       background-color: rgba(0, 0, 0, 0.5);
       }
       h1 {
-        font-size: 36px;
         margin: 0;
+        font-size: 36px;
+        font-weight: bold;
       }
-      nav {
-        background-color: #84acd7;
-        padding: 10px;
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
         text-align: center;
       }
+      nav li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      nav li:last-child {
+        margin-right: 0;
+      }
       nav a {
-        color: #333;
-        font-size: 18px;
+        display: block;
+        padding: 10px;
+        color: #fff;
         text-decoration: none;
-        margin: 0 10px;
+        transition: all 0.3s ease;
       }
       nav a:hover {
         color: #666;
       }
      .banner {
-    background-image: url(gf3.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        background-image: url(gf3.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: -1;
      }
       .banner h2 {
         color: white;
@@ -67,13 +81,15 @@
   <body>
     <header>
       <h1>Wagner's Painting</h1>
+      <nav>
+        <ul>
+          <li><a href="colors.html">Colors</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <a href="colors.html">Colors</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contactus.html">Contact</a>
-    </nav>
     <div class="banner">
       <h2>Welcome to Wagner's Painting</h2>
       <p>Where we can bring your imagination to life.</p>
@@ -81,3 +97,4 @@
     </div>
   </body>
 </html>
+
