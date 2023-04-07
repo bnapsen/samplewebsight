@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,6 +90,16 @@
       note {
 	font-size: 10px
 	    }
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+.custom-file-upload label {
+  background-color: #428bca;
+  color: #fff;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
     </style>
   </head>
 <body>
@@ -112,15 +123,18 @@
 		<section>	
 			<note>(Browser may affect Color Tool functionality.Works best in Microsoft Edge.)</note>
 		</section
-		<section>
-			<h2></h2>
-			<input type="file" id="houseImage" accept="image/*">
-			<div id="houseImagePreview"></div>
-			<h2> </h2>
-			Color Tool: 
-			<input type="color" id="houseColor">
-			<span id="colorCode"></span>
-		</section>
+<section>
+  <h2></h2>
+  <div class="custom-file-upload">
+    <input type="file" id="houseImage" name="houseImage" accept="image/*">
+    <label for="houseImage" id="customButton">Choose a file or drag and drop a picture file here</label>
+  </div>
+  <div id="houseImagePreview"></div>
+  <h2> </h2>
+  <label for="houseColor">Color Tool:</label> 
+  <input type="color" id="houseColor">
+  <span id="colorCode"></span>
+</section>
 		<section>
 			<h2></h2>
 			<canvas id="previewCanvas"></canvas>
@@ -196,5 +210,43 @@
 			}
 		});
 	</script>
+<script>
+  window.onload = function() {
+    var customButton = document.getElementById("customButton");
+
+    customButton.addEventListener("dragover", function(event) {
+      event.preventDefault();
+    });
+
+    customButton.addEventListener("drop", function(event) {
+      event.preventDefault();
+      var files = event.dataTransfer.files;
+      var fileInput = document.getElementById("houseImage");
+      fileInput.files = files;
+      previewImage(files[0]);
+    });
+    
+    document.getElementById("houseImage").addEventListener("change", function() {
+      previewImage(this.files[0]);
+    });
+    
+    document.getElementById("houseColor").addEventListener("change", function() {
+      document.getElementById("colorCode").innerHTML = this.value;
+    });
+    
+    function previewImage(file) {
+      var preview = document.getElementById("houseImagePreview");
+      var reader = new FileReader();
+      reader.onload = function() {
+        preview.innerHTML = '<img src="' + reader.result + '">';
+      };
+      if (file) {
+        reader.readAsDataURL(file);
+      } else {
+        preview.innerHTML = "";
+      }
+    }
+  };
+</script>
 </body>
 </html>
