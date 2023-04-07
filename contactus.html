@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PZ0TMJZ2Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5PZ0TMJZ2Y');
-</script>  
+    <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PZ0TMJZ2Y">	</script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-5PZ0TMJZ2Y');
+	</script>
     <meta charset="UTF-8">
     <title>Wagner's Painting - Contact</title>
     <link rel="stylesheet" href="style.css">
     <style>
+      body {
+        background-color: #84acd7;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
   header {
        background-image: url(gfhomes.jpg);
        background-size: cover;
@@ -25,28 +31,23 @@
         margin: 0;
         font-size: 36px;
         font-weight: bold;
-        text-transform: uppercase;
       }
-      nav ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-align: center;
-      }
-      nav li {
-        display: inline-block;
-        margin-right: 20px;
-      }
-      nav li:last-child {
-        margin-right: 0;
-      }
-      nav a {
-        display: block;
-        padding: 10px;
-        color: #fff;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  margin: 0 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
       nav a:hover {
         color: #666;
       }
@@ -58,9 +59,10 @@
       }
       label {
         display: block;
-        margin-top: 20px;
+        margin-top: 15px;
         font-weight: bold;
-        text-align: left;
+        text-align: left;	   
+	   color: #fff;
       }
       input, textarea {
         width: 100%;
@@ -74,42 +76,47 @@
       button {
         display: inline-block;
         margin-right: 10px;
-        background-color: #4CAF50;
+        background-color: transparent;
         color: white;
-        border: none;
+        border: 2px solid blue;
         border-radius: 5px;
-        padding: 15px;
-        font-size: 16px;
+        padding: 5px 20px;
+        font-size: 15px;
         cursor: pointer;
         margin-top: 20px;
       }
       button:hover {
-        background-color: #3e8e41;
+        background-color: #b5d7ff;
+      color: #009688;
       }
+
 
       /* Add style to the contact section */
       .contact-section {
         background-color: #84acd7;
-        color: #fff;
         text-align: center;
-        padding: 50px;
+        padding: 30px;
       }
+
 
       .contact-section h3 {
-        font-size: 36px;
-        margin-bottom: 20px;
+        font-size: 24px;
+        margin-bottom: 5px;
+	   color: #fff;
       }
+
 
       .contact-section p {
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: 20px;
+        margin-bottom: 5px;
       }
 
+
       .contact-section a {
-        color: #fff;
-        font-size: 36px;
-        text-decoration: none;
+        font-size: 20px;
+        text-decoration: underline;
       }
+
 
       .contact-section a:hover {
         text-decoration: underline;
@@ -146,4 +153,3 @@
     </main>
   </body>
 </html>
-
