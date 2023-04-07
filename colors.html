@@ -60,13 +60,13 @@
  	padding: 10px 20px;
   	border: none;
   	border-radius: 5px;
-  	background-color: #b5d7ff;
-  	color: #fff;
+  	background-color: transparent;
+  	color: #b5d7ff;
   	cursor: pointer;
   	transition: all 0.3s ease;
        }
       #saveBtn:hover {
-      background-color: #fff;
+      background-color: #b5d7ff;
       color: #009688;
       }
       img {
@@ -76,7 +76,10 @@
   	max-height: 75%; /* Set the maximum height of the image to 75% of the container height */
   	max-width: 75%; /* Set the maximum width of the image to 75% of the container width */
   	object-fit: contain;
-       }
+      }
+      note {
+	font-size: 10px
+	    }
     </style>
   </head>
 <body>
@@ -95,7 +98,10 @@
 		<section>
 			<a>Use the Color Tool to select a color or upload a </a>
 		<section>
-			<a>photo and use the dropper to select a color from that.</a>					
+			<a>photo and use the dropper to select a color from that.</a>
+		</section
+		<section>	
+			<note>(Browser may affect Color Tool functionality.Works best in Microsoft Edge.)</note>
 		</section
 		<section>
 			<h2></h2>
@@ -111,7 +117,7 @@
 			<canvas id="previewCanvas"></canvas>
 		</section>
 		<section>
-			<h2>Save a Color Sample with RGB Code</h2>
+			<a>Save a Color Sample with RGB Code</a>
 			<button id="saveBtn">Save</button>
 		</section>
 		<section>       
