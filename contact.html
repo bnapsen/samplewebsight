@@ -5,6 +5,44 @@
     <title>Wagner's Painting - Contact</title>
     <link rel="stylesheet" href="style.css">
     <style>
+      body {
+        background-color: #84acd7;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+  header {
+       background-image: url(gfhomes.jpg);
+       background-size: cover;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+      }
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  margin: 0 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+      nav a:hover {
+        color: #666;
+      }
       /* Add some style to the form */
       form {
         max-width: 500px;
@@ -13,9 +51,10 @@
       }
       label {
         display: block;
-        margin-top: 20px;
+        margin-top: 15px;
         font-weight: bold;
-        text-align: left;
+        text-align: left;	   
+	   color: #fff;
       }
       input, textarea {
         width: 100%;
@@ -29,42 +68,47 @@
       button {
         display: inline-block;
         margin-right: 10px;
-        background-color: #4CAF50;
+        background-color: transparent;
         color: white;
-        border: none;
+        border: 2px solid blue;
         border-radius: 5px;
-        padding: 15px;
-        font-size: 16px;
+        padding: 5px 20px;
+        font-size: 15px;
         cursor: pointer;
         margin-top: 20px;
       }
       button:hover {
-        background-color: #3e8e41;
+        background-color: #b5d7ff;
+      color: #009688;
       }
+
 
       /* Add style to the contact section */
       .contact-section {
-        background-color: #3498db;
-        color: #fff;
+        background-color: #84acd7;
         text-align: center;
-        padding: 50px;
+        padding: 30px;
       }
+
 
       .contact-section h3 {
-        font-size: 36px;
-        margin-bottom: 20px;
+        font-size: 24px;
+        margin-bottom: 5px;
+	   color: #fff;
       }
+
 
       .contact-section p {
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: 20px;
+        margin-bottom: 5px;
       }
 
+
       .contact-section a {
-        color: #fff;
-        font-size: 36px;
-        text-decoration: none;
+        font-size: 20px;
+        text-decoration: underline;
       }
+
 
       .contact-section a:hover {
         text-decoration: underline;
@@ -85,6 +129,7 @@
     </header>
     <main>
       <div class="contact-section">
+        <p>Call Kelly Wagner at <a href="tel:5093625228">509 362 5228</a> for a free painting consultation!</p>
         <h3>Contact Us</h3>
         <form action="https://formsubmit.co/72ecd020af18c522c3b923877eed09c5" method="POST">
           <label for="name">Name:</label>
@@ -96,9 +141,7 @@
           <br>
           <button type="submit">Send</button>
         </form>
-        <p>Call Kelly Wagner at <a href="tel:5093625228">509 362 5228</a> for a free painting consultation!</p>
       </div>
     </main>
   </body>
 </html>
-
