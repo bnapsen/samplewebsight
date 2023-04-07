@@ -23,12 +23,11 @@
         margin: 0;
       }
       nav {
-        background-color: #84acd7;
-        padding: 3px;
+        background-color: transparent;
         text-align: center;
       }
       nav a {
-        color: #333;
+        color: #fff;
         font-size: 18px;
         text-decoration: none;
         margin: 0 10px;
@@ -61,7 +60,7 @@
  	padding: 10px 20px;
   	border: none;
   	border-radius: 5px;
-  	background-color: #009688;
+  	background-color: #b5d7ff;
   	color: #fff;
   	cursor: pointer;
   	transition: all 0.3s ease;
@@ -72,7 +71,7 @@
       }
       img {
   	position: absolute;
-  	top: 1;
+  	top: 175px;
   	right: 25px;
   	max-height: 75%; /* Set the maximum height of the image to 75% of the container height */
   	max-width: 75%; /* Set the maximum width of the image to 75% of the container width */
@@ -81,38 +80,42 @@
     </style>
   </head>
 <body>
-	<header>
-				   <h1>Wagner's Painting Virtual House Painting Tool</h1>
-<nav>
-       	   <ul>
+   <header>
+	<h1>Wagner's Painting Virtual House Painting Tool</h1>
+	<nav>
+		<ul>
    	       <li><a href="index.html">Home</a></li>
   	       <li><a href="about.html">About</a></li>
    	       <li><a href="gallery.html">Gallery</a></li>
   	       <li><a href="contactus.html">Contact</a></li>
-   	   </ul>
-      </nav>
-	</header>
+		</ul>
+     </nav>
+   </header>
 	<main>
 		<section>
-			<h2>Upload a Picture of Your House</h2>
-			<input type="file" id="houseImage" accept="image/*">
-			<div id="houseImagePreview"></div>
+			<a>Use the Color Tool to select a color or upload a </a>
+		<section>
+			<a>photo and use the dropper to select a color from that.</a>					
 		</section
 		<section>
-			<h2>Select a New Color for Your House</h2>
+			<h2></h2>
+			<input type="file" id="houseImage" accept="image/*">
+			<div id="houseImagePreview"></div>
+			<h2> </h2>
+			Color Tool: 
 			<input type="color" id="houseColor">
 			<span id="colorCode"></span>
 		</section>
 		<section>
-			<h2>Preview the New House Color</h2>
+			<h2></h2>
 			<canvas id="previewCanvas"></canvas>
 		</section>
 		<section>
-			<h2>Save Your New House Color and Image</h2>
+			<h2>Save a Color Sample with RGB Code</h2>
 			<button id="saveBtn">Save</button>
 		</section>
 		<section>       
-<a href="https://www.roddapaint.com/" target="_blank" style="font-size: 20px; font-weight: bold; color: #0099cc; text-decoration: none;">Visit Rodda Paint</a>
+<h2><a href="https://www.roddapaint.com/">Visit Rodda Paint</a></h2>
 </section>
 	</main>
 	<script src="script.js"></script>
@@ -125,9 +128,9 @@
 
     let imageData = null;
 
-    previewCanvas.width = 500;
-    previewCanvas.height = 500;
-    previewCtx.fillStyle = '#ccc';
+    previewCanvas.width = 400;
+    previewCanvas.height = 200;
+    previewCtx.fillStyle = '#fff';
     previewCtx.fillRect(0, 0, previewCanvas.width, previewCanvas.height);
 
     houseColorInput.addEventListener('input', () => {
@@ -138,7 +141,7 @@
   colorCode.innerText = `${houseColorInput.value} (${color.r}, ${color.g}, ${color.b})`;
   previewCtx.font = '24px Arial';
   previewCtx.fillStyle = '#000';
-  previewCtx.fillText(`rgb(${color.r}, ${color.g}, ${color.b})`, 20, 80);
+  previewCtx.fillText(`RGB (${color.r}, ${color.g}, ${color.b})`, 20, 80);
 });
 
 
