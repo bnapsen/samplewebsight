@@ -154,6 +154,10 @@ border-radius: 4px;
 padding: 6px 12px;
 cursor: pointer;
 }
+.image {
+	margin-top: 40px;
+	margin-left: 20px;
+	width: 45%;
 .section {
   	display: flex;
   	flex-direction: row;
