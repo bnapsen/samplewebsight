@@ -1,188 +1,80 @@
 body {
-background-color:#84acd7;
-font-family: Arial, sans-serif;
-line-height: 1.5;
-margin: 0;
-padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #242d60;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  'Helvetica Neue', 'Ubuntu', sans-serif;
+  height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-button {
-display: inline-block;
-margin-right: 10px;
-background-color: transparent;
-color: white;
-border: 2px solid blue;
-border-radius: 5px;
-padding: 5px 20px;
-font-size: 15px;
-cursor: pointer;
-margin-top: 20px;
+section {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 112px;
+  border-radius: 6px;
+  justify-content: space-between;
 }
-button:hover {
-background-color: #b5d7ff;
-color: #009688;
+.product {
+  display: flex;
 }
-footer {
-	text-align: center;
-}
-
-form {
-max-width: 500px;
-margin: 0 auto;
-text-align: center;
-}
-header {
-background-image: url(gfhomes.jpg);
-background-size: cover;
-color: #fff;
-padding: 20px;
-text-align: center;
-}
-h1 {
-margin: 0;
-font-size: 36px;
-font-weight: bold;
-}
-h2 {
-color: white;
-font-size: 20px;
-text-align: left;
-}
-h3 {
-	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-main {
-padding: 20px;
-text-align: justify;
-}
-nav {
-background-color: transparent;
-text-align: center;
-}
-nav a {
-display: block;
-padding: 10px;
-color: #fff;
-text-decoration: none;
-transition: all 0.3s ease;
-}
-nav a:hover {
-color: #666;
-}
-nav li {
-display: inline-block;
-margin-right: 20px;
-}
-nav li:last-child {
-margin-right: 0;
-}
-nav ul {
-margin: 0;
-padding: 0;
-list-style: none;
-text-align: center;
-}
-note {
-	font-size: 10px;
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 p {
-margin-bottom: 20px;
-font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+  color: #242d60;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
-prod {
-	display: inline-block;
-	width: 20%;
+img {
+  border-radius: 6px;
+  margin: 10px;
+  width: 54px;
+  height: 57px;
 }
-.banner {
-background-image: url(gf3.jpg);
-background-size: cover;
-background-position: center;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+h3,
+h5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+  color: #242d60;
+  margin: 0;
 }
-.banner h2 {
-color: white;
-font-size: 48px;
-text-align: center;
+h5 {
+  opacity: 0.5;
 }
-.banner p {
-color: white;
-font-size: 24px;
-text-align: center;
+button {
+  height: 36px;
+  background: #556cd6;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  border: 0;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.6;
+  border-radius: 0 0 6px 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
 }
-.banner a {
-color: white;
-font-size: 24px;
-text-align: center;
-}
-.container {
-display: flex;
-flex-direction: row;
-}
-.contact-section {
-background-color: #84acd7;
-text-align: center;
-padding: 30px;
-}
-.contact-section a {
-font-size: 20px;
-text-decoration: underline;
-}
-.contact-section a:hover {
-text-decoration: underline;
-}
-.contact-section h3 {
-font-size: 24px;
-margin-bottom: 5px;
-color: #fff;
-}
-.contact-section p {
-font-size: 20px;
-margin-bottom: 5px;
-}
-.custom-file-upload input[type="file"] {
-display: none;
-}
-.custom-file-upload label {
-background-color: #428bca;
-color: #fff;
-border-radius: 4px;
-padding: 6px 12px;
-cursor: pointer;
-}
-.image {
-	margin-top: 40px;
-	margin-left: 20px;
-	width: 45%;
-.section {
-  	display: flex;
-  	flex-direction: row;
-}
-
-.text {
-background-color: #b5cff6;
-border: 1px solid #ccc;
-padding: 20px;
-width: 55%;
-box-sizing: border-box;
-float: left;
-}
-#saveBtn {
- 	font-size: 24px;
-  	font-weight: bold;
- 	padding: 10px 20px;
-  	border: none;
-  	border-radius: 5px;
-  	background-color: transparent;
-  	color: #b5d7ff;
-  	cursor: pointer;
-  	transition: all 0.3s ease;
-}
-#saveBtn:hover {
-background-color: #b5d7ff;
-color: #009688;
+button:hover {
+  opacity: 0.8;
 }
